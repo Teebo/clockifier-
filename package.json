@@ -4,8 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "do-ish": "node ./add.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run do-ish",
+      "pre-push": "npm run do-ish"
+    }
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "husky": "^4.2.1"
+  }
 }
